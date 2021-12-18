@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+    .videoContainer {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .videoContainer video {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .landingpage {
+        height: 80vh;
+        background-size: cover;
+        background-position:center;
+        background-repeat: repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        color: #000000;
+    }
+
+    .msgContainer {
+        animation: moverDerecha 2s ease-in;
+        z-index: 1;
+        text-align: center;
+        margin-top: 5rem;
+    }
+
+    .title {
+        font-family: 'RocknRoll One', "RocknRoll One", sans-serif;
+        font-weight: bold;
+        font-size: 5rem;
+        margin: 2rem 2rem 4rem;
+        z-index: 1;
+        text-align: center;
+        color: #5e5e5e;
+        text-shadow: rgb(143, 143, 143) 1rem 0.6rem 1rem;
+    }
+
+    .text {
+        font-family: 'Poppins', sans-serif;
+        display: block;
+        font-weight: 700;
+        font-size: 2rem;
+        text-align: center;
+        color: #ffffff;
+        align-items: center;
+        margin: 2rem 2rem 2rem;
+        z-index: 1;
+        text-shadow: rgb(143, 143, 143) 5px 7px 10px;
+    }
+
+     .btn {
+       width: 15rem;
+        height: 4rem;
+     }
+
+    .btn:before {
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        z-index: -1;
+        transition: all 0.3s ease-in-out;
+    }
+
+    @keyframes moverDerecha {
+        0% {
+            opacity: 0;
+            transform: translateX(10rem);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
+
+    @media (min-aspect-ratio: 16/9) {
+        .videoContainer {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    @media (max-aspect-ratio: 16/9) {
+        .videoContainer {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        .msgContainer {
+            margin-right: 10rem;
+        }
+    }
+    @media screen and (max-width: 900px) {
+        .msgContainer {
+            margin-right: 7rem;
+        }
+    }
+    @media screen and (max-width: 750px) {
+        .msgContainer {
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 16rem;
+        }
+        .msgContainer p {
+            width: 100%;
+            text-align: center;
+            line-height: 1.5;
+        }
+        .title {
+            font-size: 4rem;
+        }
+        .landingpage {
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+        .btn {
+            width: 12rem;
+            height: 3rem;
+            margin: 1rem 4rem;
+        }
+
+    }
+    @media screen and (max-width: 450px) {
+        .msgContainer {
+            margin-right: 4rem;
+            margin-bottom: 15rem;
+            width: 85%;
+        }
+        .title {
+            font-size: 3rem;
+        }
+        .btn {
+            width: 12rem;
+            height: 3rem;
+            margin: 1rem 6rem;
+        }
+        .landingpage {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+    }

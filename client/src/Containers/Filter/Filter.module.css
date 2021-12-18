@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.filter {
+    flex-direction: row;
+    position:fixed;
+    background: linear-gradient(0deg, #000, #707070);
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    margin: 10px;
+    padding: 100px 20px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    font-family: 'RocknRoll One', cursive;
+}
+
+.filter div {
+    width: 13rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.filter select {
+    width: 145px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    background: none;
+    margin: 7px;
+}
+
+.filter select:hover {
+    background-color: rgb(202, 202, 202);
+}
+
+.filter option {
+    background: none;
+}
+
+.name {
+    font-size: 20px;
+    color: #070505;
+}

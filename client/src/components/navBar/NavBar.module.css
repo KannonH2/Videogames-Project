@@ -1,0 +1,156 @@
+
+.mainContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.navContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding: 20px;
+    border-bottom: 2px solid #000a97;
+    margin-bottom: 3rem;
+}
+
+.navContainer a:hover {
+    color: #2f00ff;
+    transform: translateZ(5px);
+}
+
+.linkContainer{
+    display: flex;
+    align-items: center;
+}
+
+.linkContainer a {
+    margin: 0 20px;
+    color:#000000;;
+    font-family: inherit;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all .3s;
+}
+
+.hover {
+    display: inline-block;
+    position: relative;
+    color: #2600ff;
+}
+
+.filterGame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    font-family: "RocknRoll One", sans-serif;
+}
+
+.filterSelect {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #000a97;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 16px;
+    font-family: "RocknRoll One", sans-serif;
+    font-weight: 600;
+    color: #000a97;
+    background-color: #fff;
+    transition: all .3s;
+}
+
+
+
+.formContainer{
+    display: flex;
+    /* flex-direction: column; */
+}
+
+::placeholder {
+    opacity: 0.5;
+ }
+
+.input{
+    font-family: inherit;
+    padding: 10px;
+    width: 200px;
+    border-radius: 20px;
+    margin-right: 4px;
+    border: 2px solid #0000004f;
+    outline: none;
+    /* margin-bottom: 10px; */
+}
+
+.input:hover{
+    font-family: inherit;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid #000000;
+    outline: none;
+    /* margin-bottom: 10px; */
+}
+
+.input:focus{
+    border: 2px solid #1100ff;
+}
+
+.search{
+ color:black; 
+ font-size: 20px;
+ transform: scaleX(1);
+ padding-top: 4px;
+}
+
+.searchBarContainer{
+    display: flex;
+}
+
+.searchButton {
+    color: rgb(17, 0, 255);
+    background-color: #ffffff;
+    border-radius: 50px;
+    border: none;
+    font:icon;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.button:hover{
+    background-color: #0400ff;
+    color: #ffffff;
+    transition: all .2s;
+}
+
+@media screen and (max-width: 414px){
+    .searchBarContainer{
+        margin-top: 10px;
+    }
+}
+  
+@media screen and (max-width: 662px){
+  
+    .mainContainer{
+      width:100%;
+    }
+
+    .navContainer{
+      width:80%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items:stretch;
+    }
+  
+    .logo{
+      width: 20%;
+    }
+}  

@@ -1,0 +1,13 @@
+.home{
+    background-attachment: fixed;
+    height: 100%;
+    background-size: 100%;
+    background-position:center;
+    background-repeat: no-repeat;
+    display: flex;
+    overflow: visible;
+    color:blanchedalmond;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items:center;
+}
