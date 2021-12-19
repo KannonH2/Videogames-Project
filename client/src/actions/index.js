@@ -28,7 +28,7 @@ export function getVideogames() {
 
 export function searchVideogames(name) {
     return (dispatch) => {
-        axios.get(`http://localhost:3001/videogames?name=${name}`)
+        axios.get(`/videogames?name=${name}`)
             .then(res => {
                 dispatch({
                     type: SEARCH_VIDEOGAMES,
@@ -40,7 +40,7 @@ export function searchVideogames(name) {
 
 export function getVideogameById(id) {
     return (dispatch) => {
-        axios.get(`http://localhost:3001/videogame/${id}`)
+        axios.get(`/videogame/${id}`)
             .then(res => {
                 dispatch({
                     type: GET_VIDEOGAME_BY_ID,
@@ -52,7 +52,7 @@ export function getVideogameById(id) {
 
 export function getGenres() {
     return (dispatch) => {
-        axios.get('http://localhost:3001/genres')
+        axios.get('/genres')
             .then(res => {
                 dispatch({
                     type: GET_GENRES,
@@ -64,7 +64,7 @@ export function getGenres() {
 
 export function createVideogame(obj) {
     return (dispatch) =>
-        axios.post('http://localhost:3001/videogame', obj)
+        axios.post('/videogame', obj)
             .then((res) => {
                 dispatch({
                     type: CREATE_VIDEOGAME,
