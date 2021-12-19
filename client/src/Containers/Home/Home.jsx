@@ -2,8 +2,8 @@ import { React, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getVideogames, resetAll } from '../../actions/index'
 import Videogames from '../../components/Videogame/Videogame';
-import Pagination from '../../components/Pagination/Pagination';
 import style from './Home.module.css';
+import Pagination from '@material-ui/lab/Pagination';
 
 function Home() {
   const dispatch = useDispatch();
@@ -27,7 +27,7 @@ function Home() {
 
   const paginate = pageNumber => setPage(pageNumber);
 
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState([1]);
   const [videogamesPerPage] = useState(15);
 
   let lastCardPerPage = page * videogamesPerPage;
@@ -35,17 +35,18 @@ function Home() {
   let currentPageGames = allVideogames.slice(firtsCardPerPage, lastCardPerPage);
 
   return (
-    <div >
+    <div key={videogames}>
       <div className={style.home}>
         <Videogames videogames={currentPageGames} />
       </div>
-      <div>
-        <Pagination
-          videogamesPerPage={videogamesPerPage}
-          totalVideogames={allVideogames.length}
-          paginate={paginate}
+        <Pagination className={style.pagination}
+            variant="outlined"
+            shape="rounded"
+            size="large"
+            count={Math.ceil(allVideogames.length / videogamesPerPage)}
+            paginate={paginate}
+            onChange={(event, value) => setPage(value)}
         />
-      </div>  
     </div>
   );
 };

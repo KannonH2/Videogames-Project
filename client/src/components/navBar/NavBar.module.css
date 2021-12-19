@@ -4,17 +4,25 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
+}
+
+.mainContainer:hover{
+    transform: scale(1.09);
+    box-shadow: 0 12px 16px rgba(0,0,0,0.2);
+    background-image: url("https://www.latercera.com/resizer/6StcJ0PYfB9FI1ttwIfF5MY6wmc=/768x0/smart/filters:quality(70):format(webp):no_upscale()/arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/SQGMTY6UFZF6NEBI335V325SZQ.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .navContainer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
-    padding: 20px;
-    border-bottom: 2px solid #000a97;
-    margin-bottom: 3rem;
+    width: 85%;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 
 .navContainer a:hover {
@@ -28,12 +36,14 @@
 }
 
 .linkContainer a {
-    margin: 0 20px;
     color:#000000;;
-    font-family: inherit;
+    font-family: "RocknRoll One", sans-serif;
+    font-size: 1.5rem;
     text-decoration: none;
     font-weight: 600;
     transition: all .3s;
+    margin-top: 1.7rem;
+    margin-left: 3rem;
 }
 
 .hover {
@@ -48,27 +58,43 @@
     align-items: center;
     width: 90%;
     font-family: "RocknRoll One", sans-serif;
+    font-size: 1.3rem;
 }
 
 .filterSelect {
     width: 100%;
     height: 40px;
-    border: 1px solid #000a97;
-    border-radius: 5px;
+    border: 2px solid #000000;
+    border-radius: 1rem;
     padding: 0 10px;
-    font-size: 16px;
+    font-size: 1rem;
     font-family: "RocknRoll One", sans-serif;
     font-weight: 600;
-    color: #000a97;
-    background-color: #fff;
-    transition: all .3s;
+    color: #000000;
+    background-color: #cbcbcb;
+    transition: all .8s;
 }
 
+.filterSelect:hover {
+    border: 4px solid #000000;
+    color: #464646;
+    background-color: #ffffff;
+}
 
+.filterList {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    border: 2px solid #000000;
+    border-radius: 0.2rem;
+    padding: 0 10px;
+    font-family: "RocknRoll One", sans-serif;
+    font-weight: 600;
+    color: #000000;
+}
 
 .formContainer{
     display: flex;
-    /* flex-direction: column; */
 }
 
 ::placeholder {
@@ -77,33 +103,32 @@
 
 .input{
     font-family: inherit;
-    padding: 10px;
-    width: 200px;
-    border-radius: 20px;
-    margin-right: 4px;
+    padding: 0.5rem;
+    width: 16rem;
+    border-radius: 2rem;
+    margin-right: 0.5rem;
+    margin-left: 2rem;
     border: 2px solid #0000004f;
-    outline: none;
-    /* margin-bottom: 10px; */
+    margin-top: 1.5rem;
 }
 
 .input:hover{
     font-family: inherit;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 2rem;
     border: 2px solid #000000;
     outline: none;
-    /* margin-bottom: 10px; */
 }
 
 .input:focus{
-    border: 2px solid #1100ff;
+    border: 4px solid #020202;
 }
 
 .search{
  color:black; 
- font-size: 20px;
+ font-size: 2rem;
  transform: scaleX(1);
- padding-top: 4px;
+ margin-top: 1rem;
 }
 
 .searchBarContainer{
@@ -111,46 +136,143 @@
 }
 
 .searchButton {
-    color: rgb(17, 0, 255);
+    color: #000000;
     background-color: #ffffff;
     border-radius: 50px;
     border: none;
-    font:icon;
-    padding: 5px;
+    font-family: "RocknRoll One", sans-serif;
+    margin-top: 0.5rem;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 20px;
+    font-size: 1.6rem;
 }
 
-.button:hover{
-    background-color: #0400ff;
-    color: #ffffff;
-    transition: all .2s;
+.searchButton:hover{
+    color: #002a9d;
+    transition: all .4s;
 }
 
-@media screen and (max-width: 414px){
+@media screen and (max-width: 490px){
     .searchBarContainer{
         margin-top: 10px;
     }
+    .navContainer {
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+    }
+    .formContainer{
+        width:40%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items:center;
+    }
+    .linkContainer{
+        width:40%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items:center;
+    }
 }
   
-@media screen and (max-width: 662px){
-  
+@media screen and (max-width: 662px) {
+
+    .mainContainer {
+        width: 100%;
+    }
+
+    .navContainer {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+    }
+    .formContainer{
+        width:80%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items:center;
+    }
+    .linkContainer{
+        width:80%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items:center;
+    }
+}
+@media screen and (max-width: 1200px){
+
     .mainContainer{
-      width:100%;
+        width:100%;
     }
 
     .navContainer{
-      width:80%;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items:stretch;
+        width:80%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items:stretch;
     }
-  
-    .logo{
-      width: 20%;
+    .formContainer{
+        width:80%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items:center;
     }
-}  
+    .linkContainer{
+        width:80%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items:center;
+    }
+}
+@media screen and (max-width: 1440px){
+
+    .mainContainer{
+        width:100%;
+    }
+
+    .navContainer{
+        width:90%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items:stretch;
+    }
+    .formContainer{
+        width:90%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items:center;
+    }
+    .linkContainer{
+        width:90%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items:center;
+    }
+}

@@ -1,8 +1,17 @@
 .show{
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-around;
+    justify-content:flex-start;
     flex-direction: row;
     width: 80%;
     margin: 1rem 1rem 1rem 5rem;
+}
+
+.spinner {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
 }

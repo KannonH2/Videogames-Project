@@ -50,7 +50,7 @@ function NavBar() {
 
         <div className={style.linkContainer}>
           <Link to="/home" className={style.hover}>Home</Link>
-          <Link to="/create" className={style.hover}>Create VideoGame</Link>
+          <Link to="/create" className={style.hover}>Create Game</Link>
         </div>
 
         <div>
