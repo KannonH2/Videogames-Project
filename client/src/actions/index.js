@@ -16,7 +16,7 @@ export const ORDER_BY_CREATOR = 'ORDER_BY_CREATOR';
 
 export function getVideogames() {
     return (dispatch) => {
-        axios.get('http://localhost:3001/videogames')
+        axios.get('/videogames')
             .then(res => {
                 dispatch({
                     type: GET_VIDEOGAMES,
