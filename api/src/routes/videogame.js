@@ -1,11 +1,11 @@
 require('dotenv').config();
 const { Router } = require('express');
 const axios = require('axios');
-const { API_KEY } = process.env;
 const { Videogame, Genre } = require('../db');
 const { v4: uuidv4 } = require("uuid");
 
 const router = Router();
+const API_KEY = "23ac4fd7668f423e9ffcb3548f2e13e9";
 
 
 /** Info Traida desde api sin promesa */

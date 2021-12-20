@@ -1,11 +1,11 @@
 require('dotenv').config();
 const {Router} = require('express');
 const axios = require('axios');
-const {API_KEY} = process.env;
 const {Videogame, Genre} = require('../db');
 const {Op} = require('sequelize');
 
 const router = Router();
+const API_KEY = "23ac4fd7668f423e9ffcb3548f2e13e9";
 
 // Query -> name ? db + api : 100 primeros juegos
 

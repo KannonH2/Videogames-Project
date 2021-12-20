@@ -1,10 +1,11 @@
 require('dotenv').config();
 const {Router} = require('express');
 const axios = require('axios');
-const {API_KEY} = process.env;
 const {Genre} = require('../db');
 
 const router = Router();
+
+const API_KEY = "23ac4fd7668f423e9ffcb3548f2e13e9";
 
 // Obtengo los genres desde la API y los guardo en la DB
 
